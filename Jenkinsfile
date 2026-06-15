@@ -8,14 +8,16 @@ pipeline {
       }
     }
      stage('Build') {
-       steps {
-         bat 'javac hello.java'
-       }
-     }
-      stage ('Execute') {
-        steps {
-          bat 'java hello'
-        }
+       steps{
+         publishHTML{[
+           allwoMissing:true,
+           alwaysLinkTolasBuild:false,
+           keepAll:false,
+           reportDir:'.',
+           reportfiles:'jenhtml.html',
+           reportName:'my html publish'
+           ])
+                    }         
       }
   }
 }
