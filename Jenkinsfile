@@ -16,8 +16,8 @@ pipeline {
            reportDir:'.',
            reportfiles:'jenhtml.html',
            reportName:'my html publish'
-           ]}
-                    }         
+    ]}
+       }      
       }
   }
 }
